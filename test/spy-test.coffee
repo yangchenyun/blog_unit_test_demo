@@ -22,7 +22,6 @@ describe "calculator", ->
       sample.calculator(method, 1, 2)
       sinon.assert.calledOnce(@[method])
       sinon.assert.calledWithExactly(@[method], [1, 2])
-      @[method].restore()
 
   after ->
     methods = ['multiple', 'addition', 'minus', 'divide']
