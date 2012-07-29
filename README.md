@@ -1,6 +1,6 @@
 ## Introduction
 This repository is used demonstration for the blog post about [using spys, stubs and mocks in unit test][1].
-[1]: blog.yangchenyun.com/2012/07/unit-test-with-spy-stub-and-mock/
+[1]: http://blog.yangchenyun.com/2012/07/unit-test-with-spy-stub-and-mock/
 
 ## Usage
 To install
