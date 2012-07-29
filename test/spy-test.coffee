@@ -22,7 +22,10 @@ describe "calculator", ->
       sample.calculator(method, 1, 2)
       sinon.assert.calledOnce(@[method])
       sinon.assert.calledWithExactly(@[method], [1, 2])
+      @[method].restore()
 
-  it "should call the given method when parameter is valid", ->
-    sample.calculator('minus', 1)
-    sinon.assert.calledOnce(@[method])
+  after ->
+    methods = ['multiple', 'addition', 'minus', 'divide']
+    for method in methods
+      @[method].restore()
+    @calculator.restore()

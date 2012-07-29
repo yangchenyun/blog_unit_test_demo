@@ -22,3 +22,7 @@ describe "calculator", ->
       sample.calculator(method, 1)
       sinon.assert.calledOnce(@[method])
       sinon.assert.calledWithExactly(@[method], [1])
+      @[method].restore()
+
+  after ->
+    @calculator.restore()
